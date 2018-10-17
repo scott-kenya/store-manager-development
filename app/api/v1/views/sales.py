@@ -18,31 +18,31 @@ class Sales(Resource):
 
 
 
-# 	def post(name):
-# 		"""Endpoint for adding new pdt"""
-# 		data = request.get_json()
-# 		if not data:
-# 			return jsonify({"message": "You cannot leave this empty"})
-# 		name = data['name']
-# 		price = data['price']
-# 		sale_id = len(sales)+1
-# 		quantity = data['quantity']
-# 		createdby = data['createdby']
-# 		if not name or name == "":
-# 			return jsonify({"message": "Please enter product name"}), 404
-# 		else:
+	def post(name):
+		"""Endpoint for adding new pdt"""
+		data = request.get_json()
+		if not data:
+			return jsonify({"message": "You cannot leave this empty"})
+		name = data['name']
+		price = data['price']
+		sale_id = len(sales)+1
+		quantity = data['quantity']
+		createdby = data['createdby']
+		if not name or name == "":
+			return jsonify({"message": "Please enter product name"}), 404
+		else:
 
-# 			sal = {
-# 			'name': name,
-# 			'price': price,
-# 			'sale_id': sale_id,
-# 			'quantity': quantity,
-# 			'createdby': createdby
-# 			}
+			sal = {
+			'name': name,
+			'price': price,
+			'sale_id': sale_id,
+			'quantity': quantity,
+			'createdby': createdby
+			}
 
-# 			sales.append(sal)
+			sales.append(sal)
 			
-# 			return make_response(jsonify({'list': sales}))
+			return make_response(jsonify({'list': sales}))
 
 		
 
