@@ -7,12 +7,12 @@ products = []
 
 class Products(Resource):
 	
-	# def get(self):
-	# 	"""Endpoint for fetching all products"""
-	# 	return jsonify(products)
-	# 	return jsonify({'message':'Item not found'},
-	# 					{'status': 200}
-	# 		)
+	def get(self):
+		"""Endpoint for fetching all products"""
+		return jsonify(products)
+		return jsonify({'message':'Item not found'},
+						{'status': 200}
+			)
 
 
 
