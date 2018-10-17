@@ -23,11 +23,11 @@ class Sales(Resource):
 		data = request.get_json()
 		if not data:
 			return jsonify({"message": "You cannot leave this empty"})
-		name = data['name']
-		price = data['price']
+		name = 'name'
+		price = 'price'
 		sale_id = len(sales)+1
-		quantity = data['quantity']
-		createdby = data['createdby']
+		quantity = 'quantity'
+		createdby = 'createdby'
 		if not name or name == "":
 			return jsonify({"message": "Please enter product name"}), 404
 		else:
