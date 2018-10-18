@@ -23,11 +23,11 @@ class Sales(Resource):
 		data = request.get_json()
 		if not data:
 			return jsonify({"message": "You cannot leave this empty"})
-		name = data['name']
-		price = data['price']
+		name = 'name'
+		price = 'price'
 		sale_id = len(sales)+1
-		quantity = data['quantity']
-		createdby = data['createdby']
+		quantity = 'quantity'
+		createdby = 'createdby'
 		if not name or name == "":
 			return jsonify({"message": "Please enter product name"}), 404
 		else:
@@ -46,13 +46,13 @@ class Sales(Resource):
 
 		
 
-# class Sale_id(Resource):
+class Sale_id(Resource):
 
-# 	def get(self, sale_id):
-# 		sale = [sale for sale in sales if sale['sale_id'] == sale_id] or None
-# 		if sale:
-# 			return jsonify({'sale':sale[0]})
-# 		else:
-# 			return jsonify({'message': "item not found"})
-# 		return 404
-#  
+	def get(self, sale_id):
+		sale = [sale for sale in sales if sale['sale_id'] == sale_id] or None
+		if sale:
+			return jsonify({'sale':sale[0]})
+		else:
+			return jsonify({'message': "item not found"})
+		return 404
+ 
