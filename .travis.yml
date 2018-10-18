@@ -5,9 +5,7 @@ python:
 install:
   - pip install coveralls
   - pip install -r requirements.txt
-  -pip install Resources
-
-
+  - pip install Resourcesssss
 
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
