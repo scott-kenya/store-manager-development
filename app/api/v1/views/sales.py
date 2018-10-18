@@ -42,7 +42,7 @@ class Sales(Resource):
 
 			sales.append(sal)
 			
-			return make_response(jsonify({'list': sales}))
+			return make_response(jsonify({'list': sales}),201)
 
 		
 
