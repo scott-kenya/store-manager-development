@@ -42,7 +42,7 @@ class Test_products(unittest.TestCase):
 			"id": "1",
 			})
 		response = self.test_client.post('/api/v1/sales', data = data, content_type="application/json")
-		self.assertEqual(response.status_code, 200)
+		self.assertEqual(response.status_code, 201)
 
 
 
