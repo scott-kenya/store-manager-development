@@ -56,9 +56,11 @@ class Test_products(unittest.TestCase):
 		self.assertEqual(response.status_code, 200)
 
 
+	def test_invalid_id(self):
+		response =self.test_client.post('/api/v1/products', content_type="application/json")
+		self.assertEqual(response.status_code, 400)
 
-
-
+	
 
 
 
