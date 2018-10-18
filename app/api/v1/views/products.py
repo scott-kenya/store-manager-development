@@ -40,7 +40,7 @@ class Products(Resource):
 
 			products.append(payload)
 			
-			return make_response(jsonify({'list': products}))
+			return make_response(jsonify({'list': products}), 201)
 
 		
 
